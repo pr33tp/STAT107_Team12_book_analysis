@@ -20,3 +20,32 @@ source("03_graphsAndVisuals.R")
 ```
 
 
+
+**ABSTRACT**
+  This project conducts an analysis about literary evolution by examining how writing styles have changed from the early 20th to early 21st century. We are interested in investigating two questions: whether novels from the 1910s exhibit longer sentences than novels from the 2010s, and whether the older books (1910s) tend to have longer words than newer ones (2010s).
+
+
+**INTRODUCTION**
+
+
+
+**DATA**
+  The data available for performing this analysis is any online library that allows us to download the file of various novels as txt files. We retrieved all data from the Project Gutenberg website which is an open access library. In total we downloaded 20 books, 10 of which are from the 1910s and the other 10 from 2010s. Variables such as author name and book title are negligible in our analysis so new variables were created such as word length, decade, etc.  
+  Each book was manually downloaded as txt files and were put into their respective folder (by decade). From there we used the stringr and stopwords packages to clean out leading/trailing white space, remove newline characters, combine with spaces, remove extra white space, make all lowercase, and filter out stop words.
+
+
+**VISUALIZATION**
+We have not gotten to the visualization portion yet but we have begun working on box plots to show the spread of word lengths between each decade. In the future we intend on using bar graphs, summary, line graph/scatter plots to compare the means in our data analysis.
+
+
+**ANALYSIS**
+
+
+**TEAM CONTRIBUTIONS**
+-Preet Patel: created Github respiratory, downloaded and organized 10 novels, loaded all novels did all data cleaning, created 00_requirement.R source, wrote abstract, data, and visualization portions on report
+
+-Dragon He: created README, created R source code and functions for analysis, started visualizations, created/setup Final Report rmd.
+
+Imani Odunze: downloaded and organized 10 novels
+
+
