@@ -8,13 +8,12 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-knitr::opts_knit$set(root.dir = "~/Downloads/STAT107 halfway project/books_1910s")
-
 knitr::opts_knit$set(root.dir = "~/Downloads/STAT107 halfway project/books_2010s")
+
 ```
 
 ```{r}
-source("00_requirement.R")
+source("00_requirements.R")
 search()
 ```
 
@@ -64,10 +63,12 @@ substr(cleaned_text_1910s[[2]], 1, 200)
 ```
 
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
+knitr::opts_knit$set(root.dir = "~/Downloads/STAT107 halfway project/books_2010s")
 
-
-
+```
 
 
 
