@@ -10,3 +10,4 @@ get_word_lengths_from_text <- function(text) {
 get_word_lengths_from_books <- function(book_list) {
   lapply(book_list, get_word_lengths_from_text)
 }
+

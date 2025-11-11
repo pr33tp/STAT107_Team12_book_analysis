@@ -1,10 +1,3 @@
-#summary using data frame
-avg_lengths_df <- data.frame(
-  book = names(avg_lengths),
-  avg_word_length = avg_lengths
-)
-
-print(avg_lengths_df)
 
 #boxplot to visualize (more plots to come)
 plot_word_length_comparison <- function(df) {
@@ -17,3 +10,7 @@ plot_word_length_comparison <- function(df) {
     ) +
     theme_minimal()
 }
+
+p <- plot_word_length_comparison(avg_lengths_df)
+p
+aggregate(avg_word_length ~ decade, data = avg_lengths_df, mean)
