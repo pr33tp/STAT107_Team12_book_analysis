@@ -8,8 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-knitr::opts_knit$set(root.dir = "~/Downloads/STAT107 halfway project/books_1910s")
-#knitr::opts_knit$set(root.dir = "~/Downloads/STAT107 halfway project/books_2010s")
+knitr::opts_knit$set(root.dir = "C:/Users/didih/Downloads/stat107_final_project")
 
 ```
 
@@ -22,11 +21,10 @@ search()
 **DATA FROM 1910s:**
 ```{r}
 #Loading and cleaning 1910s books
-setwd("/Users/Preet/Downloads/stat107_finalproject/books_1910s")
-files <- list.files(pattern = "\\.txt$")
-files
+files_1910s <- list.files("books_1910s", full.names = TRUE)
+files_1910s
 
-books_1910s <- lapply(files, function(f) {
+books_1910s <- lapply(files_1910s, function(f) {
   readLines(f, encoding = "UTF-8") %>%
     str_trim() %>% #removes leading/trailing whitespace
     str_replace_all("\n", " ") %>%  # remove newline characters
@@ -35,10 +33,9 @@ books_1910s <- lapply(files, function(f) {
     str_to_lower() #make lowercase
   
 })
-names(books_1910s) <- files
+names(books_1910s) <- basename(files_1910s)
 
 # check second book
-names(books_1910s)[2]
 #nchar(books_1910s[[2]])  # Character count
 #substr(books_1910s[[2]], 1, 200)  # First 200 characters
 
@@ -77,8 +74,7 @@ knitr::opts_knit$set(root.dir = "~/Downloads/stat107_finalproject/books_2010s")
 **DATA FROM 2010s:**
 ```{r}
 #Loading and cleaning 2010s books
-setwd("/Users/Preet/Downloads/stat107_finalproject/books_2010s")
-files <- list.files(pattern = "\\.txt$")
+files <- list.files("books_2010s", full.names = TRUE)
 files
 
 books_2010s <- lapply(files, function(f) {
